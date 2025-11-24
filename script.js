@@ -46,7 +46,7 @@ function createFloatingHeart() {
     const heart = document.createElement('div');
     heart.innerHTML = '❤';
     heart.style.position = 'fixed';
-    heart.style.left = Math.random() * 100 + 'vw';
+    heart.style.left = Math.random() * 95 + 'vw';
     heart.style.bottom = '-50px';
     heart.style.fontSize = Math.random() * 20 + 20 + 'px';
     heart.style.opacity = Math.random() * 0.5 + 0.3;
