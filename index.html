@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<title>生日惊喜 · Love Story</title>
+		<link rel="stylesheet" href="assets/css/style.css" />
+		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+  </head>
+  <body>
+		<button id="music-toggle" class="music-toggle" aria-label="播放/暂停音乐">♫</button>
+		<!-- background music: put your mp3 at assets/bgm.mp3 or change src -->
+		<audio id="bgm" src="images/bgm/kanong.mp4" autoplay loop></audio>
+
+		<header class="hero" style="background-image: url('images/IMG_1864.JPEG');">
+			<h1>时光回忆录</h1>
+			<p class="sub">lzm & ycj 生日快乐 ❤️</p>
+			<div class="start-hint">点击页面任意位置以开始动画与音乐</div>
+		</header>
+
+		<!-- 横向滑动图像区 -->
+		<section class="carousel-section">
+			<div class="carousel" id="carousel">
+				<div class="slide" data-caption="蛋糕">
+					<img src="images/424066109b0d13be4cc7bd446f3bbb6d.jpg" alt="蛋糕">
+				</div>
+				<div class="slide" data-caption="合照">
+					<img src="images/b0b1cb5e10a8d149400b2cd2fb4abb62.JPEG" alt="合照">
+				</div>
+        <div class="slide" data-caption="仙湖植物园">
+					<img src="images/20251125142155.jpg" alt="仙湖植物园">
+				</div>
+        <div class="slide" data-caption="大梅沙">
+					<img src="images/20251125142202.jpg" alt="大梅沙">
+				</div>
+				<div class="slide" data-caption="红山动物园">
+					<img src="images/0823396bfff4ec44c07138e7d1f75d68.jpg" alt="红山动物园">
+				</div>
+			</div>
+			<button class="nav prev" id="prev">‹</button>
+			<button class="nav next" id="next">›</button>
+			<div class="carousel-caption" id="carousel-caption"></div>
+		</section>
+
+		<!-- 时间线区 -->
+		<section class="timeline-section">
+			<h2>我们的时间线</h2>
+			<div class="timeline" id="timeline">
+				<article class="timeline-item">
+					<time>2025-03-08</time>
+					<div class="timeline-content">
+						<h3>初次相见</h3>
+						<p>南京->深圳，你来见我，命运的第一次交集。</p>
+					</div>
+					<button class="gallery-btn" aria-label="查看相册">相册</button>
+					<div class="timeline-photos" style="display:none">
+						<div data-url="images/c77f89aaad4756b5bc5df866816f0d02.jpg" data-desc="去机场接你，多少有点紧张。"></div>
+						<div data-url="images/video/IMG_1761.MOV" data-desc="不是我说，一眼就看到你了。" data-type="video"></div>
+            <div data-url="images/fc210147f1ac9cc14882116e44c694d4.jpg" data-desc="初次见面的青涩，在地铁上表现得淋漓尽致。【现在这嘴巴也是越来越厉害了(〃＞目＜)】"></div>
+            <div data-url="images/20251125142208.jpg" data-desc="收到的第一份礼物，来自遥远的黑龙江，太喜欢了！"></div>
+            <div data-url="images/cf19b535aa5bb14b2016df313960c0ac.jpg" data-desc="糟粕醋火锅！emmm，海南人口味挺重的。"></div>
+            <div data-url="images/225fd7d71636c586cb61a8ca4bab4038.jpg" data-desc="去仙湖植物园，拍了好多照片"></div>
+            <div data-url="images/73ca53ff11e1af20ba6dd6e064997a70.jpg" data-desc=""></div>
+            <div data-url="images/IMG_1796.JPEG" data-desc=""></div>
+            <div data-url="images/2cc7ddccf92f38b0233d6487acedc58a.jpg" data-desc=""></div>
+            <div data-url="images/IMG_1815.JPEG" data-desc=""></div>
+            <div data-url="images/20251125142158.jpg" data-desc="大梅沙，带你第一次看海！！！"></div>
+            <div data-url="images/20251125142202.jpg" data-desc=""></div>
+            <div data-url="images/b0b1cb5e10a8d149400b2cd2fb4abb62.JPEG" data-desc=""></div>
+            <div data-url="images/20251125142145.jpg" data-desc=""></div>
+            <div data-url="images/d5137fd4ecc1b41c29a7d0ec113210e9.JPEG" data-desc="吃美食"></div>
+            <div data-url="images/3a29544f597634b89cc90c4ca8671174.jpg" data-desc="两天时间总是特别的短暂。"></div>
+					</div>
+				</article>
+				<article class="timeline-item">
+					<time>2025-06-12</time>
+					<div class="timeline-content">
+						<h3>第二次见面</h3>
+						<p>深圳->南京，我来见你，去你的学校，看看你生活四年的地方。</p>
+					</div>
+					<button class="gallery-btn" aria-label="查看相册">相册</button>
+					<div class="timeline-photos" style="display:none">
+						<div data-url="images/IMG_2966.JPEG" data-desc="第一次一个人坐飞机，南京是目前我去的最北的地方。"></div>
+            <div data-url="images/3b633ed8a87cc5a43375d53bde812668.jpg" data-desc=""></div>
+            <div data-url="images/IMG_2978.JPEG" data-desc="去了你的学校，你带我吃了你经常吃的那一家店。"></div>
+            <div data-url="images/IMG_2999.JPEG" data-desc="在离校前给你拍了张照片"></div>
+            <div data-url="images/b4feda8f57f8efac8f9734a5d9e45baa.jpg" data-desc="路人垃圾拍照技术，可恶！"></div>
+            <div data-url="images/616bcc0af75356fd6f51ecbd0f8e928f.jpg" data-desc="一起吃榴莲，见面运气加成，整整五房肉，爽吃。"></div>
+            <div data-url="images/289fd75770d31bc2bc6b80c1c9905b23.jpg" data-desc="你请我吃了正宗的东北烧烤——东北人烤的[doge]"></div>
+            <div data-url="images/814c08190f3f61d75c55f23fc7f0cbfa.jpg" data-desc="南京地铁，上去容易下来难，主打一个不想挣钱。"></div>
+            <div data-url="images/1b8168fb599a06eef7722a4399e9be8c.jpg" data-desc="鸭血粉丝汤，吃不太惯，祛魅。"></div>
+            <div data-url="images/09ae56f4cd4a4e1705b2156b942a2af9.jpg" data-desc="故宫博物院"></div>
+            <div data-url="images/IMG_3050.JPEG" data-desc="抽象"></div>
+            <div data-url="images/220644897f8a734c4ccb31beb6a77452.jpg" data-desc=""></div>
+            <div data-url="images/IMG_3154.PNG" data-desc="亲亲抱抱睡觉觉，嘿嘿，我的最爱。"></div>
+            <div data-url="images/0823396bfff4ec44c07138e7d1f75d68.jpg" data-desc="红山动物园"></div>
+            <div data-url="images/66e9882871d397eaa6beb5d3bc360791.jpg" data-desc="理想的精神境界"></div>
+						<div data-url="images/42163ab86fc6c7d6c24e4f18077b3b3a.jpg" data-desc="我想过的生活——躺"></div>
+            <div data-url="images/5a1abc2eea7e3e4f580afd9660389141.jpg" data-desc="梧桐大道"></div>
+            <div data-url="images/8ebb1bafa9d83a6ce3562b543c97ce17.jpg" data-desc="跟你一起骑小电动"></div>
+            <div data-url="images/585b47002152c32658a0b2588459791e.jpg" data-desc="坐缆车"></div>
+            <div data-url="images/IMG_3127.JPEG" data-desc="眺望南京-紫金山顶"></div>
+            <div data-url="images/08945e032892229f66edfe353d94d108.jpg" data-desc="吃火锅"></div>
+            <div data-url="images/0ac0e4807ccc4e3893f05158b7710dfe.jpg" data-desc="返程"></div>
+					</div>
+				</article>
+				<article class="timeline-item">
+					<time>2025-06-30</time>
+					<div class="timeline-content">
+						<h3>你来深圳啦，准备开始上班</h3>
+						<p>虽然只有两周没有见面，但是也是很想你呢。你来这边工作后，我们见面的时间也就更加频繁了，把深圳商场都快逛了个遍。</p>
+					</div>
+					<button class="gallery-btn" aria-label="查看相册">相册</button>
+					<div class="timeline-photos" style="display:none">
+						<div data-url="images/7.jpg" data-desc="绝美背影"></div>
+						<div data-url="images/98d341a1c06c86995c59d560294b05a0.jpg" data-desc="你说你是第一次打台球，但我咋感觉这姿势这么专业呢..." ></div>
+            <div data-url="images/video/526bb0d5eb2d612121b2e91aa2750222.mp4" data-desc="拍到了你打保龄球，一球清台的画面。" data-type="video"></div>
+						<div data-url="images/a7e3e712a3046bcf92713b4f0cf0e9e7.jpg" data-desc="你给我送的一些小玩意"></div>
+            <div data-url="images/2f9773961e4763aeb8e6ed391e108ba4.jpg" data-desc="笑得真开心"></div>
+						<div data-url="images/7cf057b8eeff143221fb72e5dd76ef13.jpg" data-desc="最后一局我赢了，嘻嘻"></div>
+            <div data-url="images/cc7323264e16c2a8fba2890276978c51.JPEG" data-desc="拍个大头贴"></div>
+            <div data-url="images/075b1db459d02a55e3e0ad703234bd24.jpg" data-desc="共享深圳繁华"></div>
+            <div data-url="images/db2d7b41b720e1374f692a40e7dc1ca5.jpg" data-desc=""></div>
+						<div data-url="images/IMG_3566.JPEG" data-desc="你请我吃的海底捞"></div>
+					</div>
+				</article>
+				<article class="timeline-item">
+					<time>2025-10-01</time>
+					<div class="timeline-content">
+						<h3>国庆节放假，你出差回来见我。</h3>
+						<p>我们在一起呆了有4天</p>
+					</div>
+					<button class="gallery-btn" aria-label="查看相册">相册</button>
+					<div class="timeline-photos" style="display:none">
+						<div data-url="images/5f4005541418bb1ed6e33f986eca360e.jpg" data-desc="吃烤肉" ></div>
+            <div data-url="images/345e6a472a4dd23ae643f12615bc9aae.jpg" data-desc="去山姆超市买东西"></div>
+						<div data-url="images/424066109b0d13be4cc7bd446f3bbb6d.jpg" data-desc="超大的蛋糕，吃了3天。"></div>
+            <div data-url="images/81b9fce8d2da080818c0de475037b7d6.jpg" data-desc="中秋节，大厨做的饭真好吃"></div>
+					</div>
+				</article>
+				<article class="timeline-item" id="birthday-item">
+					<time>2025-12-07</time>
+					<div class="gift-container">
+						<div class="content">
+							<h3>今年是 lzm & ycj 两个人的生日</h3>
+							<p></p>
+						</div>
+						<div class="gift-box" id="gift-box" role="button" aria-label="打开礼物">🎁</div>
+					</div>
+				</article>
+			</div>
+		</section>
+
+		<!-- 计时器区 -->
+		<section class="timer-section">
+			<h2>我们已经一起走过</h2>
+			<div class="timer-grid" id="timer">
+				<div class="timer-box"><span class="timer-val" id="days">0</span><span class="timer-label">天</span></div>
+				<div class="timer-box"><span class="timer-val" id="hours">0</span><span class="timer-label">小时</span></div>
+				<div class="timer-box"><span class="timer-val" id="minutes">0</span><span class="timer-label">分钟</span></div>
+				<div class="timer-box"><span class="timer-val" id="seconds">0</span><span class="timer-label">秒</span></div>
+			</div>
+		</section>
+
+		<!-- 地图区 -->
+		<section class="map-section">
+			<h2>我们的足迹</h2>
+			<div id="map"></div>
+		</section>
+
+		<footer class="page-footer">
+			<p>一南一北两个男生的恋爱</p>
+			<div class="end-mark">❧未完待续...</div>
+		</footer>
+
+		<!-- Modal for Gift -->
+		<div id="gift-modal" class="modal hidden">
+			<div class="modal-content postcard" id="postcard">
+				<div class="postcard-inner">
+					<h2>亲爱的：</h2>
+					<p>生日快乐！</p>
+					<p>这是我们在一起度过的第一个生日。</p>
+					<p>愿未来的每一天，你都能开开心心，心想事成。</p>
+          <p>也祝愿我们能够一起成长，一起面对困难，携手前进。</p>
+          <p>想要跟你去好多好多地方。</p>
+					<p class="sign">永远爱你的，<br>刘洲铭</p>
+				</div>
+				<button id="flip-btn" class="flip-btn">Next ➜</button>
+			</div>
+			<canvas id="fireworks" class="fireworks hidden"></canvas>
+			<button id="close-modal" class="close-modal">×</button>
+		</div>
+
+		<!-- Modal for Timeline Gallery -->
+		<div id="gallery-modal" class="modal hidden">
+			<div class="gallery-container">
+				<div class="gallery-slide" id="gallery-slide"></div>
+				<button class="nav prev" id="gallery-prev">‹</button>
+				<button class="nav next" id="gallery-next">›</button>
+				<div class="gallery-caption" id="gallery-caption"></div>
+				<button id="close-gallery" class="close-modal">×</button>
+			</div>
+		</div>
+
+		<!-- 可选：在项目中放置名为 bgm.mp3 的音乐文件，或使用远程链接 -->
+		<audio id="bgm" src="images/bgm/kanong.mp4" loop preload="auto"></audio>
+
+		<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+		<script src="assets/js/main.js"></script>
+	</body>
+	</html>
