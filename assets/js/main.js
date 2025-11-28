@@ -191,7 +191,7 @@
   const birthdayItem = document.getElementById('birthday-item');
 
   // Target Date
-  const targetDate = new Date('2025-11-25T10:35:00'); // Set your target date here
+  const targetDate = new Date('2025-12-07T00:00:00'); // Set your target date here
 
   // Check date on load for dot color
   const now = new Date();
