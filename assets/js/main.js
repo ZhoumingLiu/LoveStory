@@ -325,11 +325,11 @@
     }).addTo(map);
 
     const locations = [
-      {name: '深圳 (足迹)', coords: [22.5431, 114.0579], type: 'visited'},
-      {name: '南京 (足迹)', coords: [32.0603, 118.7969], type: 'visited'},
-      {name: '汕尾 (足迹)', coords: [22.7856, 115.3753], type: 'visited'},
-      {name: '河源 (我的家)', coords: [23.7298, 114.7006], type: 'birth'},
-      {name: '牡丹江 (你的家)', coords: [44.5765, 129.6332], type: 'birth'}
+      {name: '深圳 (我工作的地方)', coords: [22.5431, 114.0579], type: 'visited'},
+      {name: '南京 (你上学的地方)', coords: [32.0603, 118.7969], type: 'visited'},
+      {name: '汕尾 (你上班的地方)', coords: [22.7856, 115.3753], type: 'visited'},
+      {name: '河源 (我的家乡)', coords: [23.7298, 114.7006], type: 'birth'},
+      {name: '牡丹江 (你的家乡)', coords: [44.5765, 129.6332], type: 'birth'}
     ];
 
     locations.forEach(loc => {
